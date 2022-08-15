@@ -1,5 +1,8 @@
-package io.nology;
+package io.nology.exceptions;
 
+/**
+ * Client for calling the {@link FilePrinter}.
+ */
 public class Client {
 
     public static final String BOH_RHAPS = "bohemian-rhapsody.txt";

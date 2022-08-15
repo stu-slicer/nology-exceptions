@@ -1,8 +1,5 @@
-package io.nology;
+package io.nology.exceptions;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,6 +18,10 @@ public class FilePrinter {
      */
     private List<String> fileLines;
 
+    /**
+     * Constructor, takes the file to print.
+     * @param filePath
+     */
     public FilePrinter(String filePath) {
         this.filePath = filePath;
         this.fileLines = loadFile();
@@ -49,7 +50,7 @@ public class FilePrinter {
         int lines = 1;
         for (String line : fileLines) {
             if( includeNumbers ) {
-                System.out.print(lines++ + ".");
+                System.err.print(lines++ + ".");
             }
             System.out.print("\t"+ line + "\n");
         }
